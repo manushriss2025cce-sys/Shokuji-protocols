@@ -1,0 +1,2 @@
+# Shokuji-protocols
+A FOOD RELATED APP FOR OUR COLLAGE PURPOSE
