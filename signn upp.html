@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign Up</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #021526;  /* DARK BLUE BACKGROUND */
+        font-family: Arial, sans-serif;
+        color: #ffffff;
+    }
+
+    .signup-box {
+        width: 450px;
+        padding: 25px 40px;
+        background: #031b34; /* dark navy box */
+        border-radius: 15px;
+        margin: 40px auto;
+        position: relative;
+        overflow: hidden;
+        color: white;
+    }
+
+    /* 🔥 NEON BLUE GLOW BORDER */
+    .signup-box::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 600px;
+        height: 600px;
+        background: linear-gradient(45deg, #00aaff, #004cff, #00eaff);
+        animation: borderSpin 6s linear infinite;
+        z-index: -1;
+        border-radius: 50%;
+    }
+
+    @keyframes borderSpin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    /* Inner blur background */
+    .signup-box::after {
+        content: "";
+        position: absolute;
+        inset: 3px;
+        background: #031b34;
+        border-radius: 12px;
+        z-index: -1;
+    }
+
+    h1, h2 {
+        text-align: center;
+        color: #8acbff;   /* light blue text */
+        margin-bottom: 10px;
+    }
+
+    table {
+        margin: auto;
+        color: #d9eaff;
+    }
+
+    td {
+        padding: 6px 0;
+        font-size: 15px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="date"],
+    input[type="number"] {
+        width: 200px;
+        padding: 8px;
+        border: 1px solid #5fa8d3;
+        border-radius: 5px;
+        outline: none;
+        background: #082a47;
+        color: white;
+        transition: 0.3s;
+    }
+
+    /* 🔵 BLUE GLOW INPUT FOCUS */
+    input:focus {
+        border: 2px solid #00c3ff;
+        box-shadow: 0 0 8px #00c3ff;
+    }
+
+    /* 🔵 SUBMIT BUTTON */
+    .submit-btn {
+        padding: 8px 18px;
+        border: none;
+        background: #008cff;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 160px;
+        transition: 0.3s;
+    }
+
+    .submit-btn:hover {
+        background: #0066cc;
+        box-shadow: 0 0 12px #009cff;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="signup-box">
+    <h1>SHOKUJI PROTOCOLS</h1>
+    <h2>SIGN UP</h2>
+
+    <form>
+        <table>
+            <tr>
+                <td>USERNAME :</td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>PASSWORD :</td>
+                <td><input type="password"></td>
+            </tr>
+
+            <tr>
+                <td>CONFIRM PASSWORD:</td>
+                <td><input type="password"></td>
+            </tr>
+
+            <tr>
+                <td>DATE OF BIRTH :</td>
+                <td><input type="date"></td>
+            </tr>
+
+            <tr>
+                <td>GENDER:</td>
+                <td>
+                    <input type="radio" name="g"> male
+                    <input type="radio" name="g"> female
+                </td>
+            </tr>
+
+            <tr>
+                <td>CONTACT NUMBER:</td>
+                <td><input type="number"></td>
+            </tr>
+
+            <tr>
+                <td>EMAIL ID:</td>
+                <td><input type="email"></td>
+            </tr>
+
+            <tr>
+                <td>PHONE NUMBER:</td>
+                <td><input type="number"></td>
+            </tr>
+
+            <tr>
+                <td>ENTER THE CAPTCHA:</td>
+                <td><input type="text"></td>
+                <td><img src="C:\textbasierte-captchas.png.jpg" height="25"></td>
+            </tr>
+        </table>
+
+        <br>
+      <tr>
+<td>
+<a href="file:///E:/marginn.html" ><input type="button" value="submit"></a>
+</td></tr>
+
+    </form>
+
+</div>
+
+</body>
+</html>

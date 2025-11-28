@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Menu</title>
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom,#a2d2ff,#5078f2);
+        text-align: center;
+        padding-top: 30px;
+        color: #000a2f;
+    }
+
+    .menu-box{
+        width: 500px;
+        margin: auto;
+        padding: 25px;
+        background: rgba(255,255,255,0.3);
+        border: 3px solid #021f5f;
+        border-radius: 20px;
+
+        /* INTERACTIVE BORDER */
+        box-shadow: 0 0 15px #021f5f;
+        transition: 0.4s;
+    }
+    .menu-box:hover{
+        box-shadow: 0 0 25px #ffffff,
+                    0 0 45px #021f5f;
+        transform: scale(1.02);
+    }
+
+    h1{
+        color: #021f5f;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    table{
+        width: 100%;
+        margin-top: 15px;
+        text-align: center;
+        border-spacing: 10px;
+        font-size: 18px;
+    }
+
+    .qty-btn{
+        background:#021f5f;
+        color:white;
+        border:none;
+        padding:3px 10px;
+        cursor:pointer;
+        font-size:16px;
+        border-radius:5px;
+    }
+
+    .qty-box{
+        width: 40px;
+        padding: 5px;
+        text-align:center;
+        border:2px solid #021f5f;
+        border-radius: 6px;
+    }
+
+    .next-btn{
+        margin-top: 25px;
+        padding: 8px 22px;
+        background:#021f5f;
+        color:white;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        transition:0.3s;
+    }
+    .next-btn:hover{
+        background:#043b9c;
+        transform: scale(1.05);
+    }
+
+    .food-img{
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="menu-box">
+    <h1>MENU</h1>
+
+    <table>
+        <tr>
+            <th>ITEM</th>
+            <th>PRICE</th>
+            <th>QTY</th>
+        </tr>
+
+        <tr>
+            <td> Chicken biryani</td>
+            <td>100/-</td>
+            <td>
+                <button class="qty-btn">-</button>
+                <input type="text" class="qty-box" value="1">
+                <button class="qty-btn">+</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td> Chicken rice</td>
+            <td>100/-</td>
+            <td>
+                <button class="qty-btn">-</button>
+                <input type="text" class="qty-box" value="1">
+                <button class="qty-btn">+</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td> Chicken noodles</td>
+            <td>100/-</td>
+            <td>
+                <button class="qty-btn">-</button>
+                <input type="text" class="qty-box" value="1">
+                <button class="qty-btn">+</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td> Parotta - butter chicken</td>
+            <td>150/-</td>
+            <td>
+                <button class="qty-btn">-</button>
+                <input type="text" class="qty-box" value="1">
+                <button class="qty-btn">+</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Veg rice</td>
+            <td>90/-</td>
+            <td>
+                <button class="qty-btn">-</button>
+                <input type="text" class="qty-box" value="1">
+                <button class="qty-btn">+</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td> Veg noodles</td>
+            <td>90/-</td>
+            <td>
+                <button class="qty-btn">-</button>
+                <input type="text" class="qty-box" value="1">
+                <button class="qty-btn">+</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td> Veg biryani</td>
+            <td>100/-</td>
+            <td>
+                <button class="qty-btn">-</button>
+                <input type="text" class="qty-box" value="1">
+                <button class="qty-btn">+</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td> Variety rice</td>
+            <td>70/-</td>
+            <td>
+                <button class="qty-btn">-</button>
+                <input type="text" class="qty-box" value="1">
+                <button class="qty-btn">+</button>
+            </td>
+        </tr>
+		
+
+    </table>
+
+    <a href="file:///E:/selecteditem.html" ><button class="next-btn">NEXT</button>
+
+</div>
+<div style="
+    position: fixed;
+    top: 150px;
+    left: 20px;
+    width: 350px;
+">
+    <img src="E:\WhatsApp Image 2025-11-27 at 11.05.55 AM.jpeg" 
+         alt="Left Image" 
+         style="width: 100%; height: 500;">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Thank You</title>
+
+<style>
+    body{
+        margin:0;
+        padding:0;
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(to bottom, #001a33, #003366);
+        overflow:hidden;
+        color:white;
+        text-align:center;
+    }
+
+    /* Floating stars animation */
+    .star{
+        position:absolute;
+        width:6px;
+        height:6px;
+        background:white;
+        border-radius:50%;
+        opacity:0.8;
+        animation: moveStars 6s linear infinite;
+    }
+
+    @keyframes moveStars {
+        0%{ transform: translateY(0); opacity:1; }
+        100%{ transform: translateY(100vh); opacity:0; }
+    }
+
+    /* Main Thank You Box */
+    .thank-box{
+        width: 500px;
+        margin: 120px auto;
+        padding: 40px;
+        background: rgba(255,255,255,0.12);
+        border: 3px solid #00aaff;
+        border-radius: 25px;
+        box-shadow: 0 0 20px #00aaff;
+        transition: 0.4s;
+        animation: fadeIn 1.5s ease-out;
+    }
+
+    .thank-box:hover{
+        transform: scale(1.03);
+        box-shadow: 0 0 35px #80d4ff,
+                    0 0 55px #00aaff;
+    }
+
+    /* Fade animation */
+    @keyframes fadeIn {
+        from {opacity:0; transform: translateY(25px);}
+        to {opacity:1; transform: translateY(0);}
+    }
+
+    h1{
+        font-size: 45px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+        text-shadow: 0 0 10px #80d4ff;
+    }
+
+    p{
+        font-size:20px;
+        margin-top:10px;
+        opacity:0.9;
+    }
+
+    .emoji{
+        font-size:70px;
+        margin-top:20px;
+        animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+        0%,100% { transform: translateY(0); }
+        50% { transform: translateY(-15px); }
+    }
+</style>
+
+</head>
+<body>
+
+<!-- Floating stars -->
+<script>
+for(let i=0;i<60;i++){
+    let star = document.createElement("div");
+    star.className = "star";
+    star.style.left = Math.random()*100 + "vw";
+    star.style.animationDuration = (3 + Math.random()*4) + "s";
+    star.style.opacity = Math.random();
+    document.body.appendChild(star);
+}
+</script>
+
+<div class="thank-box">
+    <h1>THANK YOU! 💙</h1>
+    <p>Your payment was received successfully.</p>
+    <p>We appreciate your order!</p>
+    <div class="emoji">✨</div>
+</div>
+
+</body>
+</html>

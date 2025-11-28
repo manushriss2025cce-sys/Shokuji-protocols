@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Your Order Summary</title>
+
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom, #001a33, #003366);
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: white;
+    }
+
+    .summary-box{
+        width: 450px;
+        background: rgba(255,255,255,0.12);
+        padding: 25px;
+        border-radius: 20px;
+        border: 3px solid #00aaff;
+        box-shadow: 0 0 20px #00aaff;
+        transition: 0.4s;
+        text-align: center;
+    }
+
+    .summary-box:hover{
+        box-shadow: 0 0 30px #66ccff, 0 0 55px #00aaff;
+        transform: scale(1.03);
+    }
+
+    h2{
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        color: white;
+        font-size: 16px;
+    }
+
+    th, td{
+        padding: 12px;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        text-align: left;
+    }
+
+    th{
+        color: #80d9ff;
+        font-size: 17px;
+    }
+
+    .total-box{
+        margin-top: 15px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #80e0ff;
+    }
+
+    .btn{
+        margin-top: 20px;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        background: #00aaff;
+        color: white;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    .btn:hover{
+        background: #33bbff;
+        transform: scale(1.08);
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="summary-box">
+    <h2>Your Selected Items</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Qty</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody id="itemList"></tbody>
+    </table>
+
+    <div class="total-box" id="grandTotal">Total: ₹0</div>
+
+    <button class="btn" onclick="file:///E:/cafe.html">Back to Menu</button>
+	 <br><a href="file:///E:/PAYQR.html" ></td></tr><button class="next-btn">NEXT</button>
+</div>
+
+<script>
+    // Load selected items from localStorage
+    let selectedItems = JSON.parse(localStorage.getItem("selectedMenu")) || [];
+
+    let itemList = document.getElementById("itemList");
+    let grandTotal = 0;
+
+    selectedItems.forEach(item => {
+        let itemTotal = item.price * item.qty;
+        grandTotal += itemTotal;
+
+        let row = `
+            <tr>
+                <td>${item.name}</td>
+                <td>${item.qty}</td>
+                <td>₹${item.price}</td>
+                <td>₹${itemTotal}</td>
+            </tr>
+        `;
+        itemList.innerHTML += row;
+    });
+
+    document.getElementById("grandTotal").innerHTML = "Total: ₹" + grandTotal;
+</script>
+
+</body>
+</html>

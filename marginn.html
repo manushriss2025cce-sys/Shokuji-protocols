@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #0d0d0d;
+    }
+
+    .login-box{
+        width: 350px;
+        padding: 40px;
+        border-radius: 20px;
+        position: relative;
+        background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(10px);
+        color: #fff;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    /* Glowing animated border */
+    .login-box::before{
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 400px;
+        height: 400px;
+        background: linear-gradient(45deg, #00f7ff, #ff00ea, #00ff62, #ffea00);
+        animation: rotateBorder 6s linear infinite;
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    @keyframes rotateBorder {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .login-box h2{
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+
+    .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .input-box input{
+        width: 100%;
+        padding: 12px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        background: rgba(255,255,255,0.15);
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .btn{
+        width: 100%;
+        padding: 12px;
+        border: none;
+        outline: none;
+        background: #00eaff;
+        color: #000;
+        font-size: 18px;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    .btn:hover{
+        background: #00b4cc;
+    }
+
+    p{
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    a{
+        color: #00eaff;
+        text-decoration: none;
+    }
+
+</style>
+</head>
+
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+
+        <div class="input-box">
+            <input type="email" placeholder="Email">
+        </div>
+
+        <div class="input-box">
+            <input type="password" placeholder="Password">
+        </div>
+		<td>
+<a href="file:///E:/verifi.html?department=ghftftamN&year=&admission=" ><button class="btn">Sign In</button></a>
+</td></tr>
+		
+
+       
+
+        <p>Don't have an account? <a href="file:///E:/signn%20upp.html?">Sign Up</a></p>
+    </div>
+</body>
+</html>
